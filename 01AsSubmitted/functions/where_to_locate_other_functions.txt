@@ -1,0 +1,56 @@
+Many of the functions used in this analysis were not written by me, but instead sourced from other locations. Since tey may be covered by other licenses than the one I have used, they are not distributed with the code for this paper. This file lists the provenance of all files excluded from the package.
+
+Corwin Wright, U Bath, May 2016
+=====================================================
+
+get_MLS
+  - Matlab routine for reading MLS-formatted HDF5 data, provided by JPL for non-commercial use 
+  - https://mls.jpl.nasa.gov/data/readers.php
+
+m_map
+  - set of (somewhat dated) mapping routines for Matlab
+  - https://www.eoas.ubc.ca/~rich/map.html
+
+ncarray
+  - netcdf interfacing routines, used to read data only
+  - http://octave.sourceforge.net/ncarray/
+
+st, strans, gwindow
+  - routines implementing the S-Transform in Matlab. These were obtained from Robert Stockwell's CoRA website. This is no longer available at time of writing, so you may need to write your own or obtain an alernative package. The mathematics underlying it are covered by Stockwell et al, IEEE Trans 1996. 
+
+Remaining all obtained from the Matlab File Exchange, and available at time of writing:
+=====================================================
+
+export_fig 
+  - this exports the image to an external file, including some anti-aliasing and scaling
+
+cbrewer
+  - this provides a Matlab interface to the Brewer colour table set. See Harrower and Brewer, Cartogr. J., 2003
+
+subtightplot
+  - overrides Matlab subfigure spacing
+
+bin2mat
+  - fast 2d binning routine
+
+datevec2doy
+  - converts Matlab-formatted date information to day-of-year
+
+freezeColors
+  - overrides Matlab's native colour handling, allowing multiple colour tables on the same plot
+
+inpaint_nans
+  - fills in NaNs in N-dimensional arrays using a range of interpolation methods. Only used where I was sure the gaps filled were small after hand-checking. Make sure you check this too as different versions of the the raw data may have different gaps, and this routine will happily ``interpolate'' over a dataset containing no data and millions of NaNs if you tell it to.
+
+regexpdir
+  - regular-expression-aware file-location routine
+
+sinefit
+  - implements the IEEE-1057 sine-fitting routine in Matlab
+
+textprogressbar
+  - outputs a progress bar to screen
+
+wildcardsearch
+  - wildcard-aware file search routine
+
